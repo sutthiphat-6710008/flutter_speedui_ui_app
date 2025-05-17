@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speedui_ui_app/views/d02page_ui.dart';
+import 'package:flutter_speedui_ui_app/views/d03page_ui.dart';
 
 class D01Page extends StatefulWidget {
   const D01Page({super.key});
@@ -51,7 +53,12 @@ class _D01PageState extends State<D01Page> {
                   padding: const EdgeInsets.symmetric(horizontal: 24.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // กำหนด action สำหรับ Login
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => D02Page(),
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black, // สีปุ่ม
@@ -77,7 +84,12 @@ class _D01PageState extends State<D01Page> {
                   padding: const EdgeInsets.symmetric(horizontal: 24.0),
                   child: OutlinedButton(
                     onPressed: () {
-                      // กำหนด action สำหรับ Register
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => D03Page(),
+                        ),
+                      );
                     },
                     style: OutlinedButton.styleFrom(
                       minimumSize: Size(double.infinity, 48), // ขนาดปุ่ม

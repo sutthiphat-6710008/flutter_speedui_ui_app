@@ -8,6 +8,12 @@ import 'package:flutter_speedui_ui_app/views/b02page_ui.dart';
 import 'package:flutter_speedui_ui_app/views/b03page_ui.dart';
 import 'package:flutter_speedui_ui_app/views/c03page_ui.dart';
 import 'package:flutter_speedui_ui_app/views/d01pge_ui.dart';
+import 'package:flutter_speedui_ui_app/views/d02page_ui.dart';
+import 'package:flutter_speedui_ui_app/views/d03page_ui.dart';
+import 'package:flutter_speedui_ui_app/views/d04pge_ui.dart';
+import 'package:flutter_speedui_ui_app/views/d05page_ui.dart';
+import 'package:flutter_speedui_ui_app/views/d06page_ui.dart';
+import 'package:flutter_speedui_ui_app/views/do7page_ui.dart';
 import 'package:flutter_speedui_ui_app/views/home_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -29,7 +35,7 @@ class _FlutterSpeedUIState extends State<FlutterSpeedUI> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: D01Page(),
+      home: HomeUI(),
       theme: ThemeData(
         textTheme: GoogleFonts.kanitTextTheme(
           Theme.of(context).textTheme,

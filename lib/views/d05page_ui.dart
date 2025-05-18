@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speedui_ui_app/views/d04pge_ui.dart';
+import 'package:flutter_speedui_ui_app/views/d06page_ui.dart';
 
 class D05Page extends StatefulWidget {
   const D05Page({super.key});
@@ -50,15 +52,6 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
     }
   }
 
-  void _verifyOTP() {
-    final otp = _controllers.map((c) => c.text).join();
-    // TODO: เชื่อมต่อ API หรือ Firebase เพื่อตรวจสอบ OTP
-    print("OTP Entered: $otp");
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text("Verifying OTP: $otp")),
-    );
-  }
-
   Widget _buildOTPField(int index) {
     return SizedBox(
       width: 60,
@@ -94,8 +87,12 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
           children: [
             IconButton(
               onPressed: () {
-                // กลับหน้าเดิม
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => D04Page(),
+                  ),
+                );
               },
               icon: const Icon(Icons.arrow_back),
               color: Colors.black87,
@@ -126,7 +123,12 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
               child: ElevatedButton(
                 onPressed: () {
-                  // กำหนด action สำหรับ Login
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => D06Page(),
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black, // สีปุ่ม

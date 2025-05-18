@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speedui_ui_app/views/do7page_ui.dart';
 
 class D06Page extends StatefulWidget {
   const D06Page({super.key});
@@ -31,7 +32,7 @@ class _D06PageState extends State<D06Page> {
                 ),
                 child: IconButton(
                   onPressed: () {
-                    // Action สำหรับปุ่มย้อนกลับ
+                    Navigator.pop(context);
                   },
                   icon: Icon(Icons.arrow_back, color: Colors.black),
                 ),
@@ -86,7 +87,12 @@ class _D06PageState extends State<D06Page> {
               SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                  // กำหนด action สำหรับ Login
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => D07Page(),
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,

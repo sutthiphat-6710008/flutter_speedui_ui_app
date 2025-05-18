@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speedui_ui_app/views/d02page_ui.dart';
+import 'package:flutter_speedui_ui_app/views/d05page_ui.dart';
 
 class D04Page extends StatefulWidget {
   const D04Page({super.key});
@@ -31,7 +33,7 @@ class _D04PageState extends State<D04Page> {
                 ),
                 child: IconButton(
                   onPressed: () {
-                    // Action สำหรับปุ่มย้อนกลับ
+                    Navigator.pop(context);
                   },
                   icon: Icon(Icons.arrow_back, color: Colors.black),
                 ),
@@ -74,7 +76,12 @@ class _D04PageState extends State<D04Page> {
               // ปุ่ม Login
               ElevatedButton(
                 onPressed: () {
-                  // กำหนด action สำหรับ Login
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => D05Page(),
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
@@ -95,7 +102,12 @@ class _D04PageState extends State<D04Page> {
               Center(
                 child: TextButton(
                   onPressed: () {
-                    // กำหนด action สำหรับ Register
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => D02Page(),
+                      ),
+                    );
                   },
                   child: Text.rich(
                     TextSpan(

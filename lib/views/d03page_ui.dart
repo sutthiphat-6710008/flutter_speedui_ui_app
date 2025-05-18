@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speedui_ui_app/views/d02page_ui.dart';
 
 class D03Page extends StatefulWidget {
   const D03Page({super.key});
@@ -31,7 +32,7 @@ class _D03PageState extends State<D03Page> {
                 ),
                 child: IconButton(
                   onPressed: () {
-                    // Action สำหรับปุ่มย้อนกลับ
+                    Navigator.pop(context);
                   },
                   icon: Icon(Icons.arrow_back, color: Colors.black),
                 ),
@@ -200,7 +201,12 @@ class _D03PageState extends State<D03Page> {
               Center(
                 child: TextButton(
                   onPressed: () {
-                    // กำหนด action สำหรับ Register
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => D02Page(),
+                      ),
+                    );
                   },
                   child: Text.rich(
                     TextSpan(
